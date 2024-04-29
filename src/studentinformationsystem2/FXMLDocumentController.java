@@ -48,7 +48,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button close;
     
-//    DATABASE TOOls
+
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
@@ -81,7 +81,7 @@ public class FXMLDocumentController implements Initializable {
                 alert.showAndWait();
             }else{
                 if(result.next()){
-//                    THEN PROCEED TO DASHBOARD FORM
+
 
                     //getData.username = username.getText();
 

@@ -48,12 +48,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button close;
     
-//    DATABASE TOOls
+
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
     
-//    NOW LETS CREATE OUR DATABASE : ) 
+
     
     private double x= 0 ;
     private double y= 0;
@@ -72,7 +72,7 @@ public class FXMLDocumentController implements Initializable {
             prepare.setString(2, password.getText());
             
             result = prepare.executeQuery();
-//            CHECK IF FIELDS ARE EMPTTY
+
             if(username.getText().isEmpty() || password.getText().isEmpty()){
                 alert = new Alert(AlertType.ERROR);
                 alert.setTitle("Error Message");
@@ -81,9 +81,9 @@ public class FXMLDocumentController implements Initializable {
                 alert.showAndWait();
             }else{
                 if(result.next()){
-//                    THEN PROCEED TO DASHBOARD FORM
 
-                    //getData.username = username.getText();
+
+                    getData.username = username.getText();
 
                     alert = new Alert(AlertType.INFORMATION);
                     alert.setTitle("Information Message");
